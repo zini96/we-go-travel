@@ -1,0 +1,130 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  line-height: 1.5;
+  color: #24292e;
+  background-color: #fff;
+}
+
+.app {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+input.error {
+  border-color: red;
+}
+
+.input-feedback {
+  color: red;
+  height: 5px;
+  margin-top: -12px;
+}
+
+.imgBox {
+  display: flex;
+  width: 350px;
+  height: 240px;
+  overflow-x: scroll;
+}
+/* ㄴ스크롤디자인해주기 */
+
+.upBtnBox {
+  position: fixed;
+  bottom: 2rem;
+  right: 1rem;
+  z-index: 1000;
+}
+
+.upBtnBox > button {
+  background-color: #efefef;
+  padding: 15px 8px;
+  border: none;
+  border-radius: 14px;
+}
+
+.loadMoreBtn {
+  width: 180px;
+  padding: 0.3rem;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1.5px solid #cdcdcd;
+  border-radius: 5px;
+  transition: 0.2s;
+  position: relative;
+}
+
+.loadMoreBtn:hover {
+  border: 1.5px solid #8199f8;
+  color: #8199f8;
+}
+
+.cardcontainer {
+  position: relative;
+  height: 230px;
+}
+
+.carddesc {
+  height: 50px;
+  position: absolute;
+  bottom: 8%;
+  left: 8%;
+}
+
+.imgslide {
+  width: 100%;
+  max-height: 150px;
+}
+
+.ant-menu-item:nth-child(6) > span {
+  padding-right: 17px;
+}
+.ant-badge-count {
+  margin-right: 17px;
+}
+
+.orderBox {
+  border: 1px solid #dddddd;
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .cardcontainer {
+    height: 280px;
+  }
+  .imgslide {
+    max-height: 200px;
+  }
+}
+
+/* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+@media all and (max-width: 767px) {
+  .cardcontainer {
+    height: 320px;
+  }
+  .imgslide {
+    max-height: 230px;
+  }
+}
